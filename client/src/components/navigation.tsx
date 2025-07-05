@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu, Car, BookOpen, Users, Star, Phone } from "lucide-react";
 import { useTrialModal } from "@/hooks/use-trial-modal";
+import logo from '../assets/svg/rijschool-traffic.png';
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -34,8 +35,8 @@ export default function Navigation() {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center space-x-2">
-              <Car className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold text-primary">Diep Opleidingen</span>
+              <img className="logo-img" src={logo} alt="Logo" />
+              <span className="text-2xl font-bold text-primary">Rijsschooltraffic</span>
             </div>
           </Link>
         </div>
@@ -104,11 +105,11 @@ export default function Navigation() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              {/*<NavigationMenuItem>
                 <Link href="/reviews" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/reviews") ? "text-primary" : "text-muted-foreground"}`}>
                   Reviews
                 </Link>
-              </NavigationMenuItem>
+              </NavigationMenuItem>*/}
 
               <NavigationMenuItem>
                 <Link href="/contact" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/contact") ? "text-primary" : "text-muted-foreground"}`}>
